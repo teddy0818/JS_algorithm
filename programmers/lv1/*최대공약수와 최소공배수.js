@@ -4,14 +4,14 @@ function solution(n, m) {
     let result = [];
     
     const GreatestCommonFactor = (a, b) => {
-        if(b % a == 0) {
+        if(b == 0) {
             return a
-        }
-        
-        return GreatestCommonFactor(b, b % a)
-        
+        } 
+        return GreatestCommonFactor(b, a % b)
     }
+    
     result.push(GreatestCommonFactor(n, m))
     result.push(n*m / GreatestCommonFactor(n, m))
+
     return result;
 }
