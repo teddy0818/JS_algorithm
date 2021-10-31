@@ -1,3 +1,5 @@
+/* 유클리드 호제법 */
+
 function solution(n, m) {
     let resultArr = [];
     const maxCommonDividor = (a, b) => {
